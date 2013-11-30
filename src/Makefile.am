@@ -3,7 +3,7 @@ bin_PROGRAMS = yborm_gen
 yborm_gen_SOURCES = yborm_gen.cpp
 
 AM_CXXFLAGS = \
-	-I $(top_srcdir)/lib \
+	-I $(top_srcdir)/include/yb \
 	$(XML_CPPFLAGS) \
 	$(BOOST_CPPFLAGS) \
 	$(SQLITE3_CFLAGS) \

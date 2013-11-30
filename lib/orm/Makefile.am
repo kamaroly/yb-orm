@@ -42,7 +42,7 @@ libyborm_la_SOURCES = \
 
 AM_CXXFLAGS = \
 	-I $(top_srcdir)/include/yb \
-	-I $(top_srcdir)/lib/yb/orm \
+	-I $(top_srcdir)/include/private \
 	$(XML_CPPFLAGS) \
 	$(BOOST_CPPFLAGS) \
 	$(SQLITE3_CFLAGS) \

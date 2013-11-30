@@ -6,16 +6,16 @@
 #include <util/Singleton.h>
 #include <orm/SqlDriver.h>
 #if defined(YB_USE_QT)
-#include <orm/QtSqlDriver.h>
+#include "QtSqlDriver.h"
 #endif
 #if defined(YB_USE_ODBC)
-#include <orm/OdbcDriver.h>
+#include "OdbcDriver.h"
 #endif
 #if defined(YB_USE_SQLITE3)
-#include <orm/SQLiteDriver.h>
+#include "SQLiteDriver.h"
 #endif
 #if defined(YB_USE_SOCI)
-#include <orm/SOCIDriver.h>
+#include "SOCIDriver.h"
 #endif
 
 #if defined(YB_USE_QT)
