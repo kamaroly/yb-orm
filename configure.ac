@@ -46,6 +46,10 @@ YB_TEST_DB
 AM_CONDITIONAL([DIALECT_SET], [test x$YBORM_DBTYPE != x])
 
 AC_OUTPUT(Makefile
+    include/Makefile
+    include/yb/Makefile
+    include/yb/util/Makefile
+    include/yb/orm/Makefile
     lib/Makefile
     lib/test/Makefile
     lib/util/Makefile

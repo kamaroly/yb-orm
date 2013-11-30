@@ -2,7 +2,7 @@
 # have all needed files, that a GNU package needs
 AUTOMAKE_OPTIONS = foreign 1.4
 
-DIRS = lib src
+DIRS = include lib src
 
 if DIALECT_SET
 EXAMPLES_DIRS = examples

@@ -1,6 +1,4 @@
 
-ybormincludedir=$(includedir)/yb/orm
-
 if CPPUNIT_PRESENT
 SUBDIRS = . test
 else
@@ -39,14 +37,12 @@ SOCI_DRV_H =
 SOCI_DRV_CPP =
 endif
 
-yborminclude_HEADERS = \
-	$(H_FILES) $(QTSQL_DRV_H) $(ODBC_DRV_H) $(SQLITE3_DRV_H) $(SOCI_DRV_H)
-
 libyborm_la_SOURCES = \
 	$(CPP_FILES) $(QTSQL_DRV_CPP) $(ODBC_DRV_CPP) $(SQLITE3_DRV_CPP) $(SOCI_DRV_CPP)
 
 AM_CXXFLAGS = \
-	-I $(top_srcdir)/lib \
+	-I $(top_srcdir)/include/yb \
+	-I $(top_srcdir)/lib/yb/orm \
 	$(XML_CPPFLAGS) \
 	$(BOOST_CPPFLAGS) \
 	$(SQLITE3_CFLAGS) \
@@ -54,21 +50,7 @@ AM_CXXFLAGS = \
 	$(WX_CFLAGS) \
 	$(QT_CFLAGS)
 
-H_FILES = \
-	Expression.h \
-	MetaData.h \
-	Engine.h \
-	SqlDriver.h \
-	SqlPool.h \
-	DomainObject.h \
-	DomainFactory.h \
-	MetaDataConfig.h \
-	XMLizer.h \
-	DataObject.h \
-	CodeGen.h
-
 CPP_FILES = \
-	$(H_FILES) \
 	Expression.cpp \
 	MetaData.cpp \
 	Engine.cpp \
